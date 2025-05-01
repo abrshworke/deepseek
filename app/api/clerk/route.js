@@ -3,6 +3,7 @@ import User from "@/model/user";
 import connectDB from "@/config/db";
 import { Headers } from "openai/_shims";
 import { NextRequest } from "next/server";
+import OpenAI from "openai";
 
 export async function POST(req){
 const wh = new Webhook(process.env.SECRET_SIGNIN)
