@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/HP/Documents/deepseek/deep-seek/app/context/appcontext.jsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useUser } from \"@clerk/nextjs\";\r\nimport { createContext, useContext } from \"react\";\r\n\r\nconst AppContext = createContext();\r\n\r\nexport const useAppContext = () => {\r\n    return useContext(AppContext);\r\n};\r\n\r\nexport const AppContextProvider = ({ children }) => {\r\n    const { user } = useUser();\r\n\r\n    const value = {\r\n        user,\r\n    };\r\n\r\n    return <AppContext.Provider value={value}>{children}</AppContext.Provider>;\r\n};"],"names":[],"mappings":";;;;;AAEA;AACA;AAHA;;;;AAKA,MAAM,2BAAa,CAAA,GAAA,qMAAA,CAAA,gBAAa,AAAD;AAExB,MAAM,gBAAgB;IACzB,OAAO,CAAA,GAAA,qMAAA,CAAA,aAAU,AAAD,EAAE;AACtB;AAEO,MAAM,qBAAqB,CAAC,EAAE,QAAQ,EAAE;IAC3C,MAAM,EAAE,IAAI,EAAE,GAAG,CAAA,GAAA,4JAAA,CAAA,UAAO,AAAD;IAEvB,MAAM,QAAQ;QACV;IACJ;IAEA,qBAAO,8OAAC,WAAW,QAAQ;QAAC,OAAO;kBAAQ;;;;;;AAC/C","debugId":null}}]
+}
